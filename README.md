@@ -43,3 +43,61 @@ Una vez mas hacemos los cambios que nos pide el enunciado y una vez mas nos da u
 Volvemos a solucionarlo haciendo el mismo proceso antes de aplicar y subir los cambios para que la carpeta este en la ultima version al subir el cambio realizado
 
 Esta vez nos da un error al hacer pull que solucionamos eliminando el fichero java de CarpetaInstituto y volvemos a hacer add, commit y pull
+
+
+PRACTICA 4
+
+Tras clonar de nuevo el repositorio 
+
+Creamos una ligth tag haciendo
+
+git tag v0.1 "direccionDelPrimerCommit"
+
+Mandamos esa tag a git hub haciendo
+
+git push origin v0.1 (aunque podriamos haber usado --tag tambien)
+
+Despues vamos a el primer commit usando la tag  haciendo
+
+git checkout v0.1
+
+Ahi realizamos un cambio en el archivo Main de java
+
+Hacemos add y commit y lo unico que nos sale es
+
+
+$ git commit -m "commit añadiendo una frase"
+[detached HEAD 4375517] commit añadiendo una frase
+ 1 file changed, 1 insertion(+)
+
+
+Pero al volver al ultimo commit haciendo 
+
+git checkout master
+
+Nos avisa git de:
+
+Warning: you are leaving 1 commit behind, not connected to
+any of your branches:
+
+  4375517 commit añadiendo una frase
+
+If you want to keep it by creating a new branch, this may be a good time
+to do so with:
+
+ git branch <new-branch-name> 4375517
+
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+Basicamente nos dice que si queremos mantener ese commit lo que tenemos que hacer es hacer una rama nueva, ya que no puedes hacer un commit en una version pasada que afecte a la actual.
+
+Despues en la carpeta instituto hacemos un 
+
+git pull 
+
+Para obtener las tags y hacemos 
+
+git checkout v0.1
+
+Para ir a la primera version en esa carpeta
