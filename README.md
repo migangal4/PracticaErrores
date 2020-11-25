@@ -101,3 +101,52 @@ Para obtener las tags y hacemos
 git checkout v0.1
 
 Para ir a la primera version en esa carpeta
+
+
+
+
+PRACTICA 5
+
+Hacemos una nueva rama con 
+
+git branch NuevaRama
+
+Cambiamos a esa rama haciendo 
+
+git checkout NuevaRama
+
+Hacemos cambios en esta rama
+
+Hacemos add, commit  y push
+
+Siendo el push 
+
+git push origin NuevaRama
+
+Volvemos a la rama anterior haciendo 
+
+git checkout master
+
+Hacemos cambios alli y hacemos de nuevo add, commit y push.
+
+Vamos ahora a la carpeta instituto
+
+Hacemos pull
+
+Ahora nos saldra que solo tenemos la rama master
+
+(aqui intento hacer git pull NuevaRama haciendo que se me intenten unir ambas ramas, elimino la parte de la rama NuevaRama quedandome con la parte de la rama master para resolver el conflicto, pero esto hara que posteriormente  las considere como unidas ya ambas ramas)
+
+Realmente tenemos las otras ramas tambien solo tenemos que hacer
+
+git checkout NuevaRama
+
+Para que se nos active la rama NuevaRama
+
+Ahora despues de comprobar los cambios en las ramas, volvemos a la rama master
+
+Hacemos
+
+git merge NuevaRama
+
+Pero al haberlo hecho ya antes nos dice que ya lo hemos hecho por lo que no hacemos nada nuevo.
