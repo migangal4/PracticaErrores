@@ -150,3 +150,36 @@ Hacemos
 git merge NuevaRama
 
 Pero al haberlo hecho ya antes nos dice que ya lo hemos hecho por lo que no hacemos nada nuevo.
+
+
+Hacemos ahora
+
+$ git log --graph --oneline --decorate --all
+
+Y nos sale
+
+* 5153b87 (HEAD -> master, origin/master, origin/HEAD) Modificamos el README
+*   542a655 Solucionado el problema de merging
+|\
+| * 886adc9 (origin/NuevaRama, NuevaRama) añadido 'otra vez' a la segunda frase
+* |   66b8872 Merge branch 'master' of https://github.com/migangal4/PracticaErrores
+|\ \
+| * | 55fabfa README modificado
+| |/
+* | e800ac0 añadido 'por ahora' a la primera frase
+|/
+* 77aa19f (tag: v1.0) ??
+*   939eef9 Eliminamos .java y cambiamos README
+|\
+| * fe84ec3 Anadimos una fila mas
+| * 5cfe0b9 Cambiamos el README
+* |   1e96c5c solucion error
+|\ \
+| |/
+| * 8f4c717 Anadido un adios
+* | 7736454 Anadido un hola
+|/
+* 2f3262e Create README.md
+
+Donde vemos mas o menos un grafico de las ramas y los commit y merges que hemos hecho en ellas, se puede comprobar que en algunas partes 
+y hablando coloquialmente "la he liado un poco" pero en al final todas las ramas convergen correctamente en la master
